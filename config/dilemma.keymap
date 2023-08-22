@@ -82,19 +82,19 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 1 ESC  &kp N1     &kp N2                &kp N3     &kp N4    &kp N5           &kp N6     &kp N7     &kp N8    &kp N9    &kp N0  &lt 1 MINUS
-&lt 2 TAB   &kp Q      &kp W                 &kp E      &kp R     &kp T            &kp Y      &kp U      &kp I     &kp O     &kp P  &lt 2 EQUAL
-&kp LSHFT   &kp A      &kp S                 &kp D      &kp F     &kp G            &kp H      &kp J      &kp K     &kp L  &kp SEMI      &kp SQT
+
+   &lt 3 ESC  &kp Q      &kp W                 &kp E      &kp R     &kp T            &kp Y      &kp U      &kp I     &kp O     &kp P  &lt 2 MINUS
+ &kp ENTER   &kp A      &kp S                 &kp D      &kp F     &kp G            &kp H      &kp J      &kp K     &kp L  &kp SEMI      &kp SQT
  &kp CAPS   &kp Z      &kp X                 &kp C      &kp V     &kp B            &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH     &kp BSLH
-                   &kp GRAVE              &kp LGUI  &kp SPACE  &kp BSPC  &kp RIGHT_SHIFT  &kp ENTER   &kp LBKT  &kp RBKT
-                    &kp LALT  &kp C_AL_MY_COMPUTER  &kp LCTRL   &kp DEL         &kp LEFT  &kp RIGHT     &kp UP  &kp DOWN
+                 &kp LC(C) &kp LC(V) &kp BSPC &kp SPACE    &lt 2 LEFT  &lt 1 RIGHT   &kp LBKT  &kp RBKT
+                 &kp LALT  &kp LALT &mt LCTRL  LSHFT  &lt 1  DEL     &kp LGUI   &kp EQUAL   &kp LGUI   &mo 3   
             >;
         };
 
         number_layer {
             label = "NUMBER";
             bindings = <
-&trans  &none  &kp F10  &kp F11  &kp F12   &none   &none      &none  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS      &none
+  &kp TAB  &none  &kp F10  &kp F11  &kp F12   &none   &none      &none  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS      &none
 &trans  &none   &kp F7   &kp F8   &kp F9   &none   &none  &kp KP_N7     &kp KP_N8        &kp KP_N9   &kp KP_PLUS      &none
 &trans  &none   &kp F4   &kp F5   &kp F6   &none   &none  &kp KP_N4     &kp KP_N5        &kp KP_N6     &kp ENTER  &kp ENTER
 &trans  &none   &kp F1   &kp F2   &kp F3   &none   &none  &kp KP_N1     &kp KP_N2        &kp KP_N3     &kp ENTER  &kp ENTER
@@ -106,13 +106,22 @@
         symbol_layer {
             label = "SYMBOL";
             bindings = <
-   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4         &bt BT_CLR       &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &bt BT_CLR
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &rgb_ug RGB_TOG       &out OUT_USB       &out OUT_USB   &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR   &rgb_ug RGB_TOG       &out OUT_BLE       &out OUT_BLE   &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG
-     &sys_reset            &none            &none            &none  &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_OFF  &ext_power EP_ON            &none            &none            &none       &sys_reset
-                                            &none            &none             &none              &none              &none             &none            &none            &none
-                                            &none            &none             &none              &none              &none             &none            &none            &none
+   &kp C_VOL_UP  &kp C_VOL_DN  &kp AMPS  &kp STAR &kp LPAR  &kp RPAR       &none &none &kp UP &none &none &none 
+&kp C_BRI_UP &kp C_BRI_DN &kp DLLR   &kp PRCNT   &kp CARET &kp UNDER     &none &kp LEFT &kp DOWN &kp RIGHT  &none &none 
+ &none  &kp GRAVE &kp EXCL  &kp AT   &kp HASH &kp EQUAL     &none &none &none &none  &none &none
+ &none &none &kp C_RW &kp C_FF                                      &none &none &none &none 
+ &none &none &kp LSHFT  &none                                   &none &none &none &none    
             >;
         };
+  hotkey_layer {
+            label = "HOTKEY";
+            bindings = <
+ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+ &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &rgb_ug RGB_TOG       &out OUT_USB       &out OUT_USB   &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR   &rgb_ug RGB_TOG       &out OUT_BLE       &out OUT_BLE   &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG
+  &ext_power EP_TOG &ext_power EP_TOG &none &none                                                              &none &none &ext_power EP_TOG  &ext_power EP_TOG
+   &none &none &none &none                                                              &none &none &none &none                                                     
+            >;
+
     };
 };
